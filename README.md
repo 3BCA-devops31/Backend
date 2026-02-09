@@ -92,8 +92,9 @@ Supports environment-based configuration
 
 Easily deployable to cloud platforms or container orchestration tools
 
-###<img width="1920" height="1080" alt="Screenshot 2026-02-09 123744" src="https://github.com/user-attachments/assets/0d96daf0-fe9d-4db4-931f-0c6456386876" />
-<img width="1024" height="207" alt="1000043557" src="https://github.com/user-attachments/assets/d8eec5b4-3b88-48d7-b529-fbace53d04cf" />
+###<img width="1920" height="1080" alt="Screenshot 2026-02-09 123744" src="https://github.com/user-attachments/assets/0d96daf0-fe9d-4db4-931f-0c6456386876" /><img width="1500" height="330" alt="Screenshot 2026-02-09 124117" src="https://github.com/user-attachments/assets/b699cb6a-d268-4bb2-85e4-c8c0ba275f3c" />
+
+
  Future Enhancements
 
 User authentication & authorization (JWT)
