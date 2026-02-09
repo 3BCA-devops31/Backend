@@ -1,152 +1,107 @@
-# Diet & Lifestyle Tracker
+# Diet & Lifestyle Tracker – Backend
+## Project ID
 
-A full-stack application for tracking daily diet and lifestyle habits built with Spring Boot (backend) and React (frontend).
+dietandlifestyle
 
-## 🚀 Features
+### Overview
 
-- ✅ Create, Read, Update, and Delete diet records
-- 📊 Track food name, calories, meal type, and date
-- 🎨 Modern UI with Tailwind CSS
-- 📱 Responsive design
-- ✨ Form validation with React Hook Form
-- 🔄 Real-time updates
+The Diet & Lifestyle Tracker Backend is a RESTful API built to support tracking of daily meals, calorie intake, and exercise activities. It provides secure, scalable endpoints for managing user diet and lifestyle data, enabling seamless integration with the frontend application.
 
-## 📋 Prerequisites
+The backend is designed following clean architecture principles, ensuring maintainability, performance, and security.
 
-- **Java 17** or higher
-- **Node.js 18** or higher
-- **Maven** (included via mvnw)
+### Tech Stack
 
-## 🛠️ Installation & Setup
+Java 17
 
-### Backend (Spring Boot)
+Spring Boot
 
-1. Navigate to the project root:
-   ```bash
-   cd dietandlifestyle
-   ```
+Spring Web (REST APIs)
 
-2. Run the Spring Boot application:
-   ```bash
-   # Windows
-   .\mvnw.cmd spring-boot:run
-   
-   # Mac/Linux
-   ./mvnw spring-boot:run
-   ```
+Spring Data JPA
 
-3. The backend will start on `http://localhost:8080`
+Hibernate
 
-### Frontend (React + Vite)
+MySQL (or H2 for development)
 
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
+Maven
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+Docker
 
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
+SonarQube / SonarCloud (code quality & security analysis)
 
-4. The frontend will start on `http://localhost:5173`
+### Key Features
 
-## 🌐 API Endpoints
+CRUD operations for Meals and Exercises
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/diet` | Get all diet records |
-| GET | `/api/diet/{id}` | Get a specific record by ID |
-| GET | `/api/diet/date/{date}` | Get records by date (YYYY-MM-DD) |
-| POST | `/api/diet` | Create a new record |
-| PUT | `/api/diet/{id}` | Update an existing record |
-| DELETE | `/api/diet/{id}` | Delete a record |
+Daily calorie tracking
 
-## 📦 Project Structure
+RESTful API design
 
-```
-dietandlifestyle/
-├── src/main/java/com/example/dietandlifestyle/
-│   ├── controller/          # REST Controllers
-│   ├── entity/              # JPA Entities
-│   ├── enums/               # Enums (MealType)
-│   ├── repository/          # JPA Repositories
-│   └── service/             # Business Logic
-├── frontend/
-│   ├── src/
-│   │   ├── components/      # React Components
-│   │   ├── services/        # API Service Layer
-│   │   ├── App.jsx          # Main App Component
-│   │   └── main.jsx         # Entry Point
-│   └── package.json
-└── pom.xml
-```
+Input validation and error handling
 
-## 🎯 Usage
+Centralized exception management
 
-1. **Start the backend** (runs on port 8080)
-2. **Start the frontend** (runs on port 5173)
-3. Open your browser to `http://localhost:5173`
-4. Click "Add New Record" to create your first diet entry
-5. Fill in the form with food details
-6. View, edit, or delete records from the table
+Clean separation of Controller, Service, and Repository layers
 
-## 🔧 Technologies Used
+Dockerized backend for easy deployment
 
-### Backend
-- Spring Boot 4.0.2
-- Spring Data JPA
-- H2 Database (in-memory)
-- Lombok
-- Maven
+Code quality enforced using SonarQube Quality Gates
 
-### Frontend
-- React 18
-- Vite
-- Tailwind CSS
-- Axios
-- React Hook Form
+### API Modules
 
-## 📝 Sample Data Format
+Diet Management
 
-```json
-{
-  "foodName": "Grilled Chicken Salad",
-  "calories": 350,
-  "mealType": "LUNCH",
-  "date": "2026-01-24"
-}
-```
+Add, update, delete, and view meal records
 
-## 🐛 Troubleshooting
+Exercise Management
 
-### Backend won't start
-- Ensure Java 17+ is installed: `java -version`
-- Check if port 8080 is already in use
-- Run `.\mvnw.cmd clean install` to rebuild
+Track exercise activities and duration
 
-### Frontend won't start
-- Ensure Node.js is installed: `node -v`
-- Delete `node_modules` and run `npm install` again
-- Check if port 5173 is available
+Reports
 
-### CORS Errors
-- Verify the backend is running on `http://localhost:8080`
-- Check that `@CrossOrigin(origins = "http://localhost:5173")` is present in DietController
+Daily calorie summary (diet vs exercise)
 
-### Connection Refused
-- Make sure the Spring Boot backend is running before starting the frontend
-- Check that the API base URL in `dietService.js` is correct
+### Docker Support
 
-## 📄 License
+The backend is containerized using Docker, allowing consistent deployment across environments.
 
-This project is created for educational purposes.
+docker build -t dietandlifestyle-backend .
+docker run -p 8080:8080 dietandlifestyle-backend
 
-## 👨‍💻 Author
+### Code Quality & Security
 
-Developed with ❤️ using Spring Boot and React
+Static code analysis using SonarCloud
+
+Enforced Quality Gate for:
+
+Code smells
+
+Bugs
+
+Security hotspots
+
+Maintainability
+
+CI/CD integration with GitHub Actions
+
+### Deployment
+
+Runs on port 8080
+
+Supports environment-based configuration
+
+Easily deployable to cloud platforms or container orchestration tools
+
+###<img width="1920" height="1080" alt="Screenshot 2026-02-09 123744" src="https://github.com/user-attachments/assets/0d96daf0-fe9d-4db4-931f-0c6456386876" />
+<img width="1024" height="207" alt="1000043557" src="https://github.com/user-attachments/assets/d8eec5b4-3b88-48d7-b529-fbace53d04cf" />
+ Future Enhancements
+
+User authentication & authorization (JWT)
+
+Nutrition analytics and charts
+
+Role-based access control
+
+Cloud database integration
+
+API documentation using Swagger/OpenAPI
